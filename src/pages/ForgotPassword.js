@@ -16,7 +16,7 @@ function ForgotPassword() {
     const res = await axios.post(`${API}/api/auth/forgot-password`, {
       email
     });
-
+    console.log(res.data);   // 👈 add this
     alert("Reset Token: " + res.data.resetToken);
 
   } catch (error) {
